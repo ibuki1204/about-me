@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -18,6 +20,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Added for wrapping on smaller screens */
 }
 
 .nav ul li {
@@ -58,6 +61,67 @@ main {
     margin-bottom: 1rem;
 }
 
+#contact {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* Added for wrapping on smaller screens */
+}
+
+.form-group label {
+    width: 100px;
+    margin-right: 10px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Added for full width on smaller screens */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 1rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
 .footer {
     text-align: center;
     padding: 1rem 0;
@@ -67,3 +131,49 @@ main {
     bottom: 0;
     width: 100%;
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .profile-section, .hobbies-section {
+        padding: 1.5rem;
+        margin: 0.5rem auto;
+    }
+
+    #contact {
+        padding: 1.5rem;
+    }
+
+    .form-group label {
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: left; /* Align labels to the left */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .profile-section, .hobbies-section {
+        padding: 1rem;
+    }
+
+    #contact {
+        padding: 1rem;
+    }
+}
+
