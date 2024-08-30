@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自己紹介</title>
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <title>プロフィール</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
+        <button id="menu-toggle" class="menu-toggle">
+            <span class="menu-icon">&#9776;</span> <!-- 三本線アイコン -->
+        </button>
+        <nav id="menu" class="menu">
+            <button id="menu-close" class="menu-close">&times;</button> <!-- 閉じるボタン -->
             <ul>
                 <li><a href="index.html">ホーム</a></li>
+                <li><a href="profile.html">プロフィール</a></li>
                 <li><a href="hobbies.html">趣味</a></li>
+                <li><a href="uji.html">宇治について</a></li>
                 <li><a href="contact.html">お問い合わせ</a></li>
             </ul>
         </nav>
-        <h1>わたしの自己紹介サイト</h1>
+        <h1>プロフィール</h1>
     </header>
     <main>
         <section id="profile" class="profile-section">
@@ -27,7 +33,12 @@
                 <li>生年月日: 2002年12月4日</li>
                 <li>出身地: 京都府宇治市</li>
                 <li>専攻: スーパーITエンジニア専攻</li>
+                <li>経歴: 京都産業大学中退</li>
             </ul>
+            <h3>宇治市の地図</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0429459188286!2d135.82043531549355!3d34.88880338052778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001077f7c87f6a9%3A0x4db7d6371f6d6728!2z5L2_5LiA5L2_5aSn!5e0!3m2!1sja!2sjp!4v1635822288357!5m2!1sja!2sjp" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </section>
     </main>
     <footer class="footer">
@@ -36,3 +47,5 @@
     <script src="js/scripts.js"></script>
 </body>
 </html>
+
+

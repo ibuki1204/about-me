@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自己紹介</title>
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <title>趣味</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
+        <button id="menu-toggle" class="menu-toggle">
+            <span class="menu-icon">&#9776;</span> <!-- 三本線アイコン -->
+        </button>
+        <nav id="menu" class="menu">
+            <button id="menu-close" class="menu-close">&times;</button> <!-- 閉じるボタン -->
             <ul>
                 <li><a href="index.html">ホーム</a></li>
                 <li><a href="profile.html">プロフィール</a></li>
+                <li><a href="hobbies.html">趣味</a></li>
+                <li><a href="uji.html">宇治について</a></li>
                 <li><a href="contact.html">お問い合わせ</a></li>
             </ul>
         </nav>
-        <h1>わたしの自己紹介サイト</h1>
+        <h1>趣味</h1>
     </header>
     <main>
         <section id="hobbies" class="hobbies-section">
             <h2>趣味</h2>
             <ul>
-                <li>ゲーム</li>
-                <li>外食</li>
-                <li>大河ドラマ</li>
+                <li>ゲーム: パズドラ</li>
+                <li>外食: ラーメンをよく食べに行く</li>
+                <li>大河ドラマ: 好きな大河ドラマは真田丸</li>
             </ul>
+            <!-- 写真をここに追加予定 -->
         </section>
     </main>
     <footer class="footer">
@@ -35,3 +42,4 @@
     <script src="js/scripts.js"></script>
 </body>
 </html>
+
