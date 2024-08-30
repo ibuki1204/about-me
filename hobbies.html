@@ -28,18 +28,58 @@
     <main>
         <section id="hobbies" class="hobbies-section">
             <h2>趣味</h2>
-            <ul>
-                <li>ゲーム: パズドラ</li>
-                <li>外食: ラーメンをよく食べに行く</li>
-                <li>大河ドラマ: 好きな大河ドラマは真田丸</li>
+            <ul class="hobbies-list">
+                <li class="hobby-item">
+                    <button class="toggle-button" data-target="details-pazudora">
+                        <img src="images/pazudora.jpg" alt="パズドラ" class="hobby-image">
+                        <span>ゲーム</span>
+                    </button>
+                    <div id="details-pazudora" class="details" style="display: none;">
+                        <p>マイブームはパズドラです!<br>パズドラは人気のパズルRPGで、モンスターを集めて育成し、チームを編成してクエストに挑みます。
+                            <br>ランク:1027 ID:
+                        </p>
+                    </div>
+                </li>
+                <li class="hobby-item">
+                    <button class="toggle-button" data-target="details-sanngokusi">
+                        <img src="images/sanngokusi.jpg" alt="ラーメン" class="hobby-image">
+                        <span>外食</span>
+                    </button>
+                    <div id="details-sanngokusi" class="details" style="display: none;">
+                        <p>ラーメン屋によく行きます!<br>ラーメンは日本全国で様々なスタイルがあり、特にこだわりのあるお店を巡るのが好きです。
+                            <br>よく行くお店は『三国志』という宇治にあるお店です。
+                        </p>
+                    </div>
+                </li>
+                <li class="hobby-item">
+                    <button class="toggle-button" data-target="details-sanadamaru">
+                        <img src="images/sanadamaru.jpg" alt="真田丸" class="hobby-image">
+                        <span>大河ドラマ</span>
+                    </button>
+                    <div id="details-sanadamaru" class="details" style="display: none;">
+                        <p>おすすめは『真田丸』です!<br>『真田丸』は戦国時代の武将・真田信繁（幸村）を描いた大河ドラマで、その歴史と戦略が見どころです。
+                            特に最終話らへんの幸村の戦略が面白かったです。
+                        </p>
+                    </div>
+                </li>
             </ul>
-            <!-- 写真をここに追加予定 -->
         </section>
     </main>
     <footer class="footer">
         <p>&copy; 2024 わたしの自己紹介サイト</p>
     </footer>
+    <!-- モーダル -->
+    <div id="modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-image" alt="拡大表示">
+    </div>
     <script src="js/scripts.js"></script>
 </body>
 </html>
+
+
+
+
+
+
 

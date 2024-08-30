@@ -325,7 +325,546 @@ input[type="submit"]:hover {
 .menu-close:hover {
     color: #007bff;
 }
+/* 全体のスタイル */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e0e0e0;
+    margin: 0;
+}
 
+.header {
+    background-color: #505a60;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav ul li {
+    margin: 0 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    padding-top: 0.5rem;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    padding: 2rem 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu.show {
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 1rem;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: #505a60;
+}
+
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #fff;
+}
+
+.menu-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.welcome-section, .update-section, .social-media {
+    background-color: #fff;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.social-media p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.social-media a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.social-media i {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.social-link:hover {
+    color: #505a60;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #505a60;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-section, .update-section, .social-media {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .menu {
+        width: 80%;
+    }
+}
+/* 全体の基本スタイル */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+/* ヘッダー */
+.header {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+
+/* メニューアイコンのスタイル調整 */
+.menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background: none; /* 背景色をなしにする */
+    color: #fff; /* アイコンの色を白に設定 */
+    border: none; /* 枠線を消す */
+    font-size: 20px; /* アイコンのサイズ調整 */
+    cursor: pointer; /* カーソルをポインタに */
+    transition: color 0.3s; /* ホバー時のエフェクト */
+}
+.menu-toggle:hover {
+    color: #ddd; /* ホバー時の色変化 */
+}
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    padding: 2rem 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu.show {
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 1rem;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: #505a60;
+}
+
+.menu-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* メインコンテンツ */
+main {
+    padding: 2rem 1rem;
+}
+
+/* 宇治の情報セクション */
+.uji-info-section {
+    background-color: #fff;
+    margin: 1rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.uji-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.uji-info h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 1rem 0;
+}
+
+.uji-info img {
+    width: 100%;
+    max-width: 300px; /* 画像の最大幅を設定 */
+    height: auto; /* 高さを自動調整 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.uji-info p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* フッター */
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #6c757d;
+    color: #fff;
+    position: relative;
+    width: 100%;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .uji-info {
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+
+    .uji-info img {
+        max-width: 100%; /* 画面幅に応じてサイズ調整 */
+    }
+}
+
+@media (max-width: 480px) {
+    .uji-info-section {
+        padding: 1.5rem;
+        margin: 0.5rem auto;
+    }
+
+    .uji-info h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.hobbies-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.hobbies-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.hobby-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.hobby-item:hover {
+    transform: scale(1.05);
+}
+
+.hobby-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.toggle-button span {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.details {
+    padding: 1rem;
+    display: none;
+    text-align: left;
+}
+
+.footer {
+    background-color: #6c757d;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+/* 趣味セクション */
+.hobbies-section {
+    background-color: #fff;
+    margin: 1rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hobbies-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hobby-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.toggle-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 1rem;
+    transition: background-color 0.3s;
+    text-align: left;
+}
+
+.toggle-button:hover {
+    background-color: #f0f0f0;
+}
+
+.hobby-image {
+    width: 100px; /* 一貫した画像サイズ */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.details {
+    display: none;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+.details p {
+    margin: 0;
+}
+/* モーダルのスタイル */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hobby-item {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hobby-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* モーダルの表示 */
+.modal.show {
+    display: flex;
+}
+/* 趣味セクション */
+.hobbies-section {
+    padding: 2rem;
+    background-color: #fff;
+    margin: 1rem auto;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hobbies-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hobby-item {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.hobby-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.details {
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+    display: none; /* デフォルトでは非表示にする */
+}
 
 
 
